@@ -1,0 +1,22 @@
+@import "_general/_colors";
+@import "_general/_spaces";
+@import "_general/_fonts";
+@import "_general/_base";
+@import "variables";
+@import "mixins";
+
+@import "_shared/header";
+@import "_shared/navigation";
+@import "_components/kacheln";
+
+@import "node_modules/tachyons-sass/tachyons.scss";font-stack
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 500ms ease-out;
+}
+
+.page-enter,
+.page-leave {
+    opacity: 0;
+}

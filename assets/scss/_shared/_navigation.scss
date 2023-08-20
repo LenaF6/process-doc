@@ -1,0 +1,75 @@
+nav#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    width: $navigation-width;
+    background-color: $white;
+    color: $white;
+    text-align: center;
+    writing-mode: tb-rl;
+    -webkit-box-shadow: 3px 0px 30px 5px rgba(34, 34, 34, 0.2);
+    -moz-box-shadow: 3px 0px 30px 5px rgba(34, 34, 34, 0.2);
+    box-shadow: 3px 0px 30px 5px rgba(34, 34, 34, 0.2);
+    z-index:99999;
+    a.navigation-trigger {
+        transform: rotate(180deg);
+        display: block;
+        color: $black;
+        line-height: $navigation-width;
+    }
+}
+
+#navigation-overlay {
+    font-size: 12vh;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: $navigation-width;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+  
+    display: none;
+    text-align: center;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in-out;
+    animation-duration: 400ms;
+    &.show {
+        display: block;
+    }
+    .navigation-link {
+        display: block;
+        color: $black;
+    }
+    .navigation-link:hover {
+        opacity: 0.6;
+    }
+    @keyframes fadeInOpacity {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100vw;
+        }
+    }
+}
+
+#__wrapper {
+    position: relative;
+    z-index: 1;
+    margin-left: $navigation-width;
+}
+
+.typecontainer{
+    padding-top: 15vh;
+}
+
+@media only screen and (max-width: 600px) {
+ .typecontainer{
+    padding-top: 25vh;
+    font-size:50px;
+}
+}
